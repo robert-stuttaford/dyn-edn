@@ -99,12 +99,12 @@ properties beyond those obtained from environment variables and JVM system prope
 ----
 (require '[clojure.edn :as edn]
          '[clojure.java.io :as io]
-         '[com.walmartlabs.dyn-edn :refer [env-readers])
+         '[com.walmartlabs.dyn-edn :refer [env-readers]])
 
 (->> "config.edn"
      io/resource
      slurp
-     (edn/read-string {:readers (env-readers)})
+     (edn/read-string {:readers (env-readers)}))
 ----
 
 
